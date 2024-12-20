@@ -1,10 +1,10 @@
 import pandas as pd
 
 # Leer los datos especificando el tipo de datos para evitar advertencias
-data = pd.read_csv('../data/Total_2022.csv', dtype={'wallet_number': str})
-additional_data = pd.read_csv('../data/Transactions_amount_2022.csv')
-bill_payment_data = pd.read_csv('../data/Transaction_amount_bill_payments_2022.csv')
-bill_payment_service_data = pd.read_csv('../data/Transaction_amount_bill_payments_2022.csv')
+data = pd.read_csv('Ruta de acceso a datos', dtype={'wallet_number': str})
+additional_data = pd.read_csv('Ruta de acceso a datos')
+bill_payment_data = pd.read_csv('Ruta de acceso a datos')
+bill_payment_service_data = pd.read_csv('Ruta de acceso a datos')
 
 # Realizar el merge con ambos DataFrames de amounts
 merged_data = pd.merge(data, additional_data[['rrn', 'amount']], on='rrn', how='left')
@@ -49,6 +49,6 @@ bill_payment_service_data.drop('amount', axis=1, inplace=True)
 merged_data = pd.merge(merged_data, bill_payment_service_data[['rrn', 'service_id']], on='rrn', how='left')
 
 # Guardar el DataFrame combinado en un nuevo archivo CSV
-merged_data.to_csv('../data/totalDataFrame.csv', index=False)
+merged_data.to_csv('Ruta de acceso a datos', index=False)
 
 print('Se ha guardado el nuevo archivo')

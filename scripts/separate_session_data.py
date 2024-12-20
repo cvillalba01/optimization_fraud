@@ -1,10 +1,10 @@
 import pandas as pd
 
 # Ruta del archivo CSV original
-input_file = '../data/totalDataFrame.csv'
+input_file = 'Ruta de acceso a datos'
 
 # Ruta del archivo CSV reducido para session_data
-output_file_session = '/tmp/sessionData_reduced.csv'
+output_file_session = 'Ruta de acceso a datos'
 
 # Leer el archivo CSV
 df = pd.read_csv(input_file, dtype={'wallet_number': str, 'service_id': 'float'})

@@ -14,8 +14,8 @@ conn = psycopg2.connect(
 cur = conn.cursor()
 
 # Leer los archivos CSV en DataFrames de Pandas
-total_data = pd.read_csv('../data/totalDataFrame.csv')
-wtransfer_data = pd.read_csv('../data/wtransfer_transactions.csv')
+total_data = pd.read_csv('Ruta_para_extraer_datos')
+wtransfer_data = pd.read_csv('Ruta_para_extraer_datos')
 
 # Insertar datos en la tabla de transacciones
 for index, row in total_data.iterrows():

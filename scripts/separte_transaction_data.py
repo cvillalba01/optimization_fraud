@@ -1,10 +1,10 @@
 import pandas as pd
 
 # Ruta del archivo CSV original
-input_file = '../data/totalDataFrame.csv'
+input_file = 'Ruta de acceso a datos'
 
 # Ruta del archivo CSV reducido
-output_file = '/tmp/totalDataFrame_reduced.csv'
+output_file = 'Ruta de acceso a datos'
 
 # Leer el archivo CSV, asegurándose de que service_id sea tratado como float
 # Se setean los tipos de datos a string y float.
